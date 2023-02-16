@@ -37,4 +37,7 @@ public class EmployeeService {
         return empRepository.save(emp);
     }
 
+    public void cleanEmployees(){
+        empRepository.deleteAll();
+    }
 }
