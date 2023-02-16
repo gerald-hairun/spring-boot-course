@@ -23,17 +23,17 @@ public class CompanyController {
         return companyService.getCompany(id);
     }
 
-    @RequestMapping(value = "/company", method = RequestMethod.POST)
+    @PostMapping(value = "/company")
     public Company createCompany(@RequestBody Company newComp) {
         return companyService.createCompany(newComp);
     }
 
-    @RequestMapping(value = "/company/{compId}", method = RequestMethod.PUT)
+    @PutMapping(value = "/company/{compId}")
     public Company updateCompany(@PathVariable(value = "compId") Long id, @RequestBody Company comp){
         return companyService.updateCompany(id, comp);
     }
 
-    @RequestMapping(value = "/company/{compId}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/company/{compId}")
     public void deleteCompany(@PathVariable(value = "compId") Long id){
         companyService.deleteCompany(id);
     }
