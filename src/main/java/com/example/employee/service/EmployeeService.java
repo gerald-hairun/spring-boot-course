@@ -22,6 +22,11 @@ public class EmployeeService {
         return empRepository.findAll();
     }
 
+    public List<Employee> getEmployeesByCompany(Long compId) {
+
+        return empRepository.findByCompanyId(compId);
+    }
+
     // DELETE
     public void deleteEmployee(Long empId) {
         empRepository.deleteById(empId);

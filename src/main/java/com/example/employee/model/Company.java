@@ -13,10 +13,10 @@ import java.util.Collection;
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="comp_id")
+    @Column(name="id")
     private Long id;
 
-    @Column(name = "company_name")
+    @Column(name = "name")
     private String name;
 
     @OneToMany(mappedBy = "company")

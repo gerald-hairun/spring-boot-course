@@ -17,10 +17,6 @@ public class CompanyService {
         return companyRepository.save(comp);
     }
 
-    public List<Company> createManyCompanies(List<Company> comps) {
-        return companyRepository.saveAll(comps);
-    }
-
     public List<Company> getCompanies() {
         return companyRepository.findAll();
     }

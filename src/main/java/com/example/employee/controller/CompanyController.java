@@ -13,12 +13,12 @@ public class CompanyController {
     @Autowired
     CompanyService companyService;
 
-    @RequestMapping(value="/companies", method = RequestMethod.GET)
+    @GetMapping(value="/companies")
     public List<Company> getCompanies(){
         return companyService.getCompanies();
     }
 
-    @RequestMapping(value = "/company/{compId}", method = RequestMethod.GET)
+    @GetMapping(value = "/company/{compId}")
     public Company getCompany(@PathVariable(value = "compId") Long id){
         return companyService.getCompany(id);
     }
